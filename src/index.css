@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inter {
+    font-family: "Inter", sans-serif;
+    font-variation-settings:
+      "slnt" 0;
+  }
+
+  .merriweather {
+    font-family: "Merriweather", serif;
+    font-style: normal;
+  }
+
+  .rakkas {
+    font-family: "Rakkas", serif;
+    font-style: normal;
+  }
+  
+
+  .zoomIn {
+    animation: zoom 1s ease-in forwards;
+  }
+
+  .zoomIn-burger {
+    animation: zoomBurger 1s ease-in forwards;
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(0.5);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes zoomBurger {
+    from {
+      transform: scale(0.5);
+      opacity: 0
+    }
+    to {
+      transform: scale(1);
+      opacity: 1
+    }
+  }
+
+  .fries_r {
+    animation: slideIn 1s ease-in forwards, jump 1s ease-in-out 1s infinite;
+    transform: scale(1.5);
+  }
+  
+  @keyframes jump {
+    0% {
+      transform: translateY(1%) scale(1.5);
+    }
+    50% {
+      transform: translateY(0%) scale(1.5);
+    }
+    100% {
+      transform: translateY(1%) scale(1.5);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%) scale(1.5);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0) scale(1.5);
+      opacity: 1;
+    }
+  }
+  
+.fries_l {
+  animation: slideIn_l 1s ease-in forwards, jump 1s ease-in-out 1s infinite;
+  transform: scale(1.5);
+}
+
+@keyframes slideIn_l {
+  from {
+    transform: translateX(-100%) scale(1.5);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1.5);
+    opacity: 1;
+  }
+}
