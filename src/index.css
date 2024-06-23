@@ -8,11 +8,6 @@
       "slnt" 0;
   }
 
-  .merriweather {
-    font-family: "Merriweather", serif;
-    font-style: normal;
-  }
-
   .rakkas {
     font-family: "Rakkas", serif;
     font-style: normal;
@@ -89,4 +84,46 @@
     transform: translateX(0) scale(1.5);
     opacity: 1;
   }
+}
+
+
+.hiddenNavSlideIn {
+  animation: navSlideIn 0.25s ease-in forwards
+}
+
+@keyframes navSlideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hiddenNavSlideOut {
+  animation: navSlideOut 0.25s ease-in forwards
+}
+
+@keyframes navSlideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+
+.box {
+  --mask:
+    radial-gradient(111.8px at 50% 150px,#000 99%,#0000 101%) calc(50% - 100px) 0/200px 51% repeat-x,
+    radial-gradient(111.8px at 50% -100px,#0000 99%,#000 101%) 50% 50px/200px calc(51% - 50px) repeat-x,
+    radial-gradient(111.8px at 50% calc(100% - 150px),#000 99%,#0000 101%) 50% 100%/200px 51% repeat-x,
+    radial-gradient(111.8px at 50% calc(100% + 100px),#0000 99%,#000 101%) calc(50% - 100px) calc(100% - 50px)/200px calc(51% - 50px) repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
 }

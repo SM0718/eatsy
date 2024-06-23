@@ -43,7 +43,7 @@ function HiddenNav({className}) {
           </NavLink>
         </div>
         
-        <SlidingNav headerItems={headerItems} setShow={setShow} className={`${show? "flex" : "hidden"} absolute left-0 top-0`}/>
+        <SlidingNav headerItems={headerItems} setShow={setShow} className={`${show? "hiddenNavSlideIn" : "hiddenNavSlideOut"} flexcd  absolute left-0 top-0`}/>
       </div>
   )
 }
